@@ -134,3 +134,9 @@ cython_debug/
 # Custom
 tracker_stubs/
 outputs_videos/
+models/
+training/tennis-ball-detection-6/
+training/*.pt
+training/*.mp4
+*.pt
+*.mp4

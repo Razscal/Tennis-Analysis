@@ -23,7 +23,6 @@ def main(input_video, read_from_stub = False):
 	# print(player_detections)
 
 	# Detect ball
-	ball_tracker = BallTracker('models/best.pt')
 	ball_detections = ball_tracker.detect_frames(video_frames,
 	                                             read_from_stub,
 	                                             stub_path='tracker_stubs/ball_detections.pkl')
@@ -34,7 +33,6 @@ def main(input_video, read_from_stub = False):
 	print(ball_detections)
 
 	# Detect court lines.
-	court_model_path = 'models/keypoints_model.pth'
 	court_line_detector = CourtLineDetector(court_model_path)
 	court_key_points = court_line_detector.predict(video_frames[0])
 	# print(court_key_points)
